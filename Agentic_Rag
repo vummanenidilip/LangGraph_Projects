@@ -1,1 +1,32 @@
 
+# 🧠 Agentic RAG System with LangGraph & LangChain
+
+This project showcases a work-in-progress implementation of an **Agentic Retrieval-Augmented Generation (RAG)** system using [LangGraph](https://github.com/langchain-ai/langgraph), [LangChain](https://github.com/langchain-ai/langchain), and OpenAI tools.
+
+The goal is to build an intelligent agent that can **decide when to retrieve external knowledge** from a vector store and when to respond directly, while also **grading relevance, rewriting user queries**, and generating final answers.
+
+## 🚀 What’s Implemented
+
+- ✅ Loaded documents using `WebBaseLoader` from Lilian Weng’s blog
+- ✅ Preprocessed content using `RecursiveCharacterTextSplitter`
+- ✅ Embedded and indexed documents using **OpenAIEmbeddings** and **FAISS**
+- ✅ Created a semantic **retriever tool** using `create_retriever_tool`
+- ✅ Integrated retriever into a `ToolNode` for LangGraph workflows
+
+## 🧭 Upcoming Enhancements
+
+To fully match the Agentic RAG system architecture, the following components will be implemented next:
+
+- [ ] **StateGraph Orchestration** using `LangGraph`  
+- [ ] **LLM Decision Node** to decide whether to retrieve or respond directly  
+- [ ] **Document Grading** using a relevance classifier (binary: yes/no)  
+- [ ] **Question Rewriting Node** to refine vague queries  
+- [ ] **Answer Generation Node** to return grounded and concise responses  
+- [ ] **End-to-end graph execution and streaming output**
+
+## 📂 File Structure
+
+```bash
+.
+├── Agentic_Rag_Example.ipynb  # Main implementation notebook
+├── README.md                  # Project overview and instructions
